@@ -1,4 +1,4 @@
-# Sentiument Analysis detection programme:
+# Sentiment Analysis detection programme:
 
 ## Overview
 
