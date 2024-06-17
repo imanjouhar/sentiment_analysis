@@ -1,0 +1,27 @@
+## Emotion Detection in Images: Conception Phase
+## Introduction
+The marketing initiative to gauge emotional responses to advertisements through facial expressions presents an intriguing challenge. In some supermarkets in the UK it is already present and companies test their products with a camera to capture the reaction of the customers. This document outlines the conceptual framework for developing an emotion detection tool to identify at least three distinct emotional states from facial images. This could be done by focusing on categorical emotions such as happiness, surprise, and disgust.
+##System Overview
+The model uses Convolutional Neural Networks (CNNs), involving TensorFlow and Keras due to their comprehensive support for deep learning tasks and large libraries. These technologies are chosen for their flexibility, extensive documentation, and community support, making them ideal for implementing the components of the emotion detection application.
+Dataset
+It is possible to use existing labeled images on Kaggle, more specifically the dataset selected that would be suitable for this project is the MMAFEDB. This database includes images of real people in low resolution, to process them faster, but good enough to make it easy to read the facial expressions.
+The images are taken with different angles, some with glasses to train the model to recognize expressions of faces even with some obstacles. The images are taken of people of different ages and ethnicities, so it is the ideal dastaset to train this model. 
+The more images are used to train the model, the better it will work, therefore this database is perfect because it includes around 13.000 images by summing selected feelings of interest. The process with be using images from the same database and split it into groups of images to test, train and validation.
+The chosen feelings have been selected attentively to be more useful in this specific case of marketing. Where the company is interested in seeing the reaction of a customer, usually angry feelings are not common, nor fear, nor sadness, which are part of the database.
+Component Interaction and Process Flow
+1.	Data Preparation: Import ImageDataGenerator from Keras to ensure a diverse dataset in each epoch, 
+allowing the model's ability to be trained across various facial expressions and different each time we run it.
+2.	Model Architecture: A sequential model comprising convolutional layers for feature extraction from facial images, 
+followed by dense layers for classification into emotional states.
+3.	Training and Validation: This involves training the model on a labeled dataset with the emotions of interest and 
+validating its performance on a separate validation set to ensure accuracy. The database will be split into three parts: 
+72% of the images will be used for training and 14% for validation and the remainig for testing.
+4.	Evaluation: Uses accuracy and loss metrics to validate the quality of classification results, ensuring the model's reliability in real-world applications.
+Validation of classification results
+The quality of classification results will be validated through a combination of accuracy metrics to show the model performance in identifying emotions
+Technological frameworks and tools
+•	TensorFlow and Keras: 2.8 version
+•	Python 3.9 version or above.
+•	Matplotlib: 3.5 version or above.
+•	Pandas: 1.4 version
+•	Numpy: 1.22 version
