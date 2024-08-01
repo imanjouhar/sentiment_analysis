@@ -1,42 +1,19 @@
 ##Emotion detection in Images: Conception Phase
 
-The aim of this project is to satisfy the marketing initiative which aims to measure emotional responses to advertisements by analyzing facial expressions. 
-As aready seen in some  supermarkets in UK, companies use cameras to capture customer reactions to their products, 
-as well to measure the lilelihood of selling a certain product in specific locations. 
-This document outlines the conceptual framework for creating a tool that can detect at least three different emotional states from facial images. 
-In particular, the focus will be identifying categorical emotions such as happiness, surprise, disgust, and neutral.
+The aim of this project is to satisfy the marketing initiative, which aims to measure emotional responses to advertisements by analyzing facial expressions. As already seen in some supermarkets in the UK, companies use cameras to capture customer reactions to their products and measure the likelihood of selling a certain product in specific locations. This document outlines the conceptual framework for creating a tool to detect at least three emotional states from facial images. In particular, the focus will be identifying categorical emotions such as happiness, surprise, disgust, and neutral.
 System Overview
-The model uses Convolutional Neural Networks (CNNs) implemented with TensorFlow and Keras as they support deep learning tasks and benefit from extensive libraries. 
-The CNN, used with Tensorflow and in particular Keras can split the dataset, 
-and have a sequential function to select feelings from more than two categories, 
-which make them ideal for implementing the components of the emotion detection tool.
+The model uses Convolutional Neural Networks (CNNs) implemented with TensorFlow and Keras, as they support deep learning tasks and benefit from extensive libraries. CNNs, used with TensorFlow and, in particular, Keras, can split the dataset and have a sequential function to select feelings from more than two categories, which makes them ideal for implementing the components of the emotion detection tool.
 Dataset
-Using existing labeled images from Kaggle is a conventient option for this project. 
-Specifically, the MMAFEDB dataset seems well-suited. 
-This dataset contains images of real people in low resolution which allows for faster processing. 
-Despite the resolution being low, it is still of sufficient quality to effectively capture and interpret facial expressions. 
-The images were captured from various angles, including some with glasses, 
-in order to train the model to recognize facial expressions even when there are obstacles present. 
-The images feature individuals of diverse ages and ethnicities, making this dataset ideal for training the model.
-The more images used to train the model, the more effective it will be. 
-This database is ideal as it contains approximately 90,000 images representing various emotions of interest. 
-The process will involve using images from the same organized database for training, validation, and testing. 
-The specific emotions selected have been carefully chosen to be more useful in this marketing case. 
-The company is focused on observing customer reactions, so emotions of anger, fear, and sadness, while part of the database, 
-are not common customer reactions to products and have been omitted for this particular study.
+Using existing labeled images from Kaggle is a convenient option for this project. Specifically, the MMAFEDB dataset seems well-suited. This dataset contains low-resolution images of real people, allowing for faster processing. Despite the low resolution, it is still sufficient to effectively capture and interpret facial expressions. The images were captured from various angles, including some with glasses, to train the model to recognize facial expressions even when there are obstacles present. The images feature individuals of diverse ages and ethnicities, making this dataset ideal for training the model.
+The more images used to train the model, the more effective it will be. This database is ideal as it contains approximately 90,000 images representing various emotions of interest. The process will involve using images from the same organized database for training, validation, and testing. The specific emotions selected have been carefully chosen to be more useful in this marketing case. The company is focused on observing customer reactions, so emotions of anger, fear, and sadness, while part of the database, are not common customer reactions to products and have been omitted for this particular study.
 Process
-1.	Data Preparation: Import ImageDataGenerator from Keras to ensure a diverse dataset in each epoch, 
-allowing the model's ability to be trained across various facial expressions and different each time it is run run by assigning it a function to select images at random.
-2.	Model Architecture: A sequential model consists of convolutional layers to extract features from facial images, 
-followed by dense layers for classifying them into emotional states.
-3.	Training and Validation: In order to train the model, a labeled dataset is used, 
-containing the emotions of interest and then assess its performance using a separate validation set to ensure accuracy. 
-The database will be divided into three parts: 72% of the images will be allocated for training, 
-14% for validation, and the remaining 14% for testing.
+1.	Data Preparation: Import ImageDataGenerator from Keras to ensure a diverse dataset in each epoch, allowing the model's ability to be trained across various facial expressions and different each time it is run run by assigning it a function to select images at random.
+2.	Model Architecture: A sequential model consists of convolutional layers to extract features from facial images, followed by dense layers for classifying them into emotional states.
+3.	Training and Validation: To train the model, a labeled dataset containing the emotions of interest is used. Then, to ensure accuracy, its performance is assessed using a separate validation set. The database will be divided into three parts: 72% of the images will be allocated for training, 14% for validation, and the remaining 14% for testing.
 4.	Evaluation: This process uses accuracy and loss metrics to validate the quality of classification results, ensuring the model's reliability in real-world applications.
 Requirements
 The model’s ability to accurately identify emotions will be validated using a combination of accuracy metrics to assess the quality of the classification results.
-Technological frameworks and tools reuired for this project:
+Technological frameworks and tools required for this project:
 •	TensorFlow and Keras: 2.8 version
 •	Python 3.9 version or above.
 •	Matplotlib: 3.5 version or above.
