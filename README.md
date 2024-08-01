@@ -57,7 +57,7 @@ components of the emotion detection application.
     pip install -r requirements.txt
     ```
 
-4. **Download the MMAFEDB dataset**:
+4. **Download the MMAFEDB CLEAN dataset**: https://www.kaggle.com/datasets/yuulind/mmafedb-clean
     - Place the dataset in the appropriate directory structure and save it as follows, by leaving only
     the sub.folders needed in each of the folders train, valid and test:
     - HAPPY, DISGUST, NEUTRAL, SURPRISE
